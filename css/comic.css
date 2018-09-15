@@ -1,0 +1,137 @@
+body {
+  margin: 20px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20pt;
+  text-align: center;
+  background: #eabcf7;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+}
+
+.main {
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #eabcf7;
+}
+
+.case1 {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  top: 0px;
+  left: 0px;
+  background: #9e1abe;
+  border: white;
+  border-style: solid;
+  overflow:hidden;
+}
+
+
+.case2 {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  left: 200px;
+  background: #9e1abe;
+  border: white;
+  border-style: solid;
+  overflow:hidden;
+}
+
+.case3 {
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  left: 400px;
+  background: #9e1abe;
+  border: white;
+  border-style: solid;
+  overflow:hidden;
+}
+
+.wav-con{
+  background-color: #9e1abe;
+  margin-top: 232px;
+}
+
+.vitesse1{
+  animation: wave 2s infinite linear;
+}
+.vitesse2{
+  animation: wave 1.5s infinite linear;
+}
+.vitesse3{
+  animation: wave 1s infinite linear;
+}
+
+.wave{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #be43e0;
+}
+
+.wave::before{
+  content:"";
+  position: relative;
+  display: block;
+  margin-left: 426px;
+  width: 250px;
+  height: 250px;
+  background-color: #be43e0;
+  border-radius: 50%;
+}
+
+.wave::after{
+  content:"";
+  position: relative;
+  display:block;
+  margin-left: 213px;
+  margin-top: -380px;
+  background-color: #9e1abe;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.bottom{
+  width: 800px;
+  height: 200px;
+  margin-top: -182px;
+  background-color: #be43e0;
+}
+
+@keyframes wave{
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(-426px);
+  }
+}
+
+@keyframes wind{
+  0%{
+    transform: translateY(0px);
+    transform: translateX(0px);
+    background-color: #be43e0;
+  }
+  50%{
+    transform: translateY(50px);
+    transform: translateX(-213px);
+    background-color: #be43e0;
+  }
+  100%{
+    transform: translateY(0px);
+    transform: translateX(-426px);
+    background-color: #e287fc;
+  }
+}
+
+/* be43e0 */
+/* e287fc */
