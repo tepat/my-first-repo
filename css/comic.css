@@ -29,6 +29,11 @@ body {
   border: white;
   border-style: solid;
   overflow:hidden;
+  animation: fadeOut 5s infinite linear;
+}
+
+.case1:hover, .case2:hover, .case3:hover{
+  /* background: black; */
 }
 
 
@@ -41,6 +46,7 @@ body {
   border: white;
   border-style: solid;
   overflow:hidden;
+  animation: fadeOut 5s infinite linear;
 }
 
 .case3 {
@@ -48,32 +54,68 @@ body {
   width: 200px;
   height: 500px;
   left: 400px;
-  background: #9e1abe;
+  /* background: #9e1abe; */
   border: white;
   border-style: solid;
   overflow:hidden;
+  animation: fadeOut 5s infinite linear;
+}
+
+@keyframes fadeOut{
+  0%{
+    background-color: #9e1abe;
+  }
+  50%{
+    background-color: black;
+  }
+  100%{
+    background-color: #9e1abe;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    background-color: black;
+  }
+  50%{
+    background-color: #9e1abe;
+  }
+  100%{
+    background-color: black;
+  }
 }
 
 .wav-con{
-  background-color: #9e1abe;
+  /* background-color: #9e1abe; */
   margin-top: 232px;
+  animation: fadeOut 2s infinite linear;
 }
 
 .vitesse1{
   animation: wave 2s infinite linear;
 }
+.vitesse1:hover{
+  animation: wave 0.5s infinite linear;
+}
 .vitesse2{
-  animation: wave 1.5s infinite linear;
+  animation: wave 1s infinite linear;
+}
+.vitesse2:hover{
+  animation: wave 2s infinite linear;
 }
 .vitesse3{
-  animation: wave 1s infinite linear;
+  animation: wave 2s infinite linear;
+}
+.vitesse3:hover{
+  animation: waveRevert 1s infinite linear;
 }
 
 .wave{
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-color: #be43e0;
+  /* background-color: #be43e0; */
+  animation: fadeIn 2s infinite linear;
 }
 
 .wave::before{
@@ -83,8 +125,9 @@ body {
   margin-left: 426px;
   width: 250px;
   height: 250px;
-  background-color: #be43e0;
+  /* background-color: #be43e0; */
   border-radius: 50%;
+  animation: fadeIn 2s infinite linear;
 }
 
 .wave::after{
@@ -93,17 +136,38 @@ body {
   display:block;
   margin-left: 213px;
   margin-top: -380px;
-  background-color: #9e1abe;
+  /* background-color: #9e1abe; */
   border-radius: 50%;
   width: 250px;
   height: 250px;
+  animation: fadeOut 2s infinite linear;
+}
+
+.wave:hover::after{
+  /* background-color: black; */
+  /* animation: wink 0.1s infinite linear; */
+}
+
+.wave:hover::before{
+  /* background-color: black; */
+  /* animation: wink 0.1s infinite linear; */
+}
+
+@keyframes wink{
+  from{
+    background-color: #9e1abe;
+  }
+  to{
+    background-color: black;
+  }
 }
 
 .bottom{
   width: 800px;
   height: 200px;
   margin-top: -182px;
-  background-color: #be43e0;
+  /* background-color: #be43e0; */
+  animation: fadeIn 2s infinite linear;
 }
 
 @keyframes wave{
@@ -112,6 +176,15 @@ body {
   }
   to{
     transform: translateX(-426px);
+  }
+}
+
+@keyframes waveRevert{
+  from{
+    transform: translateX(-426px);
+  }
+  to{
+    transform: translateX(0px);
   }
 }
 
